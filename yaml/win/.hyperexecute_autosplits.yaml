@@ -16,10 +16,11 @@ cacheDirectories:
 pre:
   - pip3 install -r requirement.txt --cache-dir CacheDir
   - playwright install
+  - python3 --version
 testDiscovery:
   type: raw
   mode: dynamic
   command: grep -lr 'def' *.py
 testRunnerCommand: pytest $test
 post:
-  - cat yaml/win/*.*hyperexecute_autosplits.yaml
+  - cat yaml/win/*.*hyperexecute_autosplits.yaml

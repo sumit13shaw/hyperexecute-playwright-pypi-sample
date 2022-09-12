@@ -22,4 +22,4 @@ testDiscovery:
   command: grep -lr 'def' *.py
 testRunnerCommand: pytest $test
 post:
-  - cat yaml/win/*.*hyperexecute_autosplits.yaml
+  - cat yaml/win/*.*hyperexecute_autosplits.yaml
