@@ -6,21 +6,19 @@ testSuiteStep: 90
 runson: win
 autosplit: true
 retryOnFailure: true
-maxRetries: 5
-concurrency: 2
+maxRetries: 1
+concurrency: 1
 env:
  TARGET_OS: "Windows 10"
 cacheKey: '{{ checksum "requirement.txt" }}'
 cacheDirectories:
   - CacheDir
 pre:
-  - pip3 install -r requirement.txt --cache-dir CacheDir
+  - npm install playwright@1.24.0 --save-exact
+  - pip install -r requirement.txt --cache-dir CacheDir
   - playwright install
-  - python3 --version
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: static
   command: grep -lr 'def' *.py
-testRunnerCommand: pytest $test
-post:
-  - cat yaml/win/*.*hyperexecute_autosplits.yaml
+testRunnerCommand: pytest test_app.py

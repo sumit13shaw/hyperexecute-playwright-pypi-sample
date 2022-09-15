@@ -120,8 +120,8 @@ Auto-split is set to true in the YAML file.
 
 ```yaml
 retryOnFailure: true
-maxRetries: 5
-concurrency: 2
+maxRetries: 1
+concurrency: 1
 ```
 
 ## Pre Steps and Dependency Caching

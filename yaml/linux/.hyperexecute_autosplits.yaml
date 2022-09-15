@@ -6,15 +6,16 @@ testSuiteStep: 90
 runson: linux
 autosplit: true
 retryOnFailure: true
-maxRetries: 5
-concurrency: 2
+maxRetries: 1
+concurrency: 1
 env:
  TARGET_OS: "LINUX"
 cacheKey: '{{ checksum "requirement.txt" }}'
 cacheDirectories:
   - CacheDir
 pre:
-  - pip3 install -r requirement.txt --cache-dir CacheDir
+  - npm install playwright@1.24.0 --save-exact
+  - pip install -r requirement.txt --cache-dir CacheDir
   - playwright install
 testDiscovery:
   type: raw
@@ -22,4 +23,4 @@ testDiscovery:
   command: grep -lr 'def' *.py
 testRunnerCommand: pytest $test
 post:
-  - cat yaml/win/*.*hyperexecute_autosplits.yaml
+  - cat yaml/win/.hyperexecute_autosplits.yaml
