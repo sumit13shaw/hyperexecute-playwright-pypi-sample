@@ -21,4 +21,4 @@ testDiscovery:
   type: raw
   mode: static
   command: grep -lr 'def' *.py
-testRunnerCommand: pytest test_app.py
+testRunnerCommand: pytest $test

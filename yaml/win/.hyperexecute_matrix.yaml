@@ -5,7 +5,7 @@ testSuiteTimeout: 90
 testSuiteStep: 90
 matrix:
   os: [win]
-  files: ["test_app.py", "test_sample_.py"]
+  files: ["test_app.py"]
 runson: ${matrix.os}
 pre:
   - npm install playwright@1.24.0 --save-exact
