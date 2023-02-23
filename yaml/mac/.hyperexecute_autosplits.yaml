@@ -9,18 +9,25 @@ retryOnFailure: true
 maxRetries: 1
 concurrency: 1
 env:
- TARGET_OS: "MacOS Catalina"
+  TARGET_OS: "MacOS Catalina"
 cacheKey: '{{ checksum "requirement.txt" }}'
 cacheDirectories:
   - CacheDir
 pre:
-  - npm install playwright@1.24.0 --save-exact
-  - pip install -r requirement.txt --cache-dir CacheDir
-  - playwright install
+  - npm install playwright --save-exact
+  - pip3 install -r requirement.txt --cache-dir CacheDir
+  - npx playwright install
+  - pip3 install pytest==7.2.1
+
 testDiscovery:
   type: raw
   mode: dynamic
   command: grep -lr 'def' *.py
-testRunnerCommand: pytest $test
+testRunnerCommand: python3 -m pytest $test
+
 post:
   - cat yaml/win/.hyperexecute_autosplits.yaml
+
+runtime:
+  language: python
+  version: "3.7"

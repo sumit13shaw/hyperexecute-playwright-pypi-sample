@@ -1,5 +1,5 @@
 ---
-version: '0.1'
+version: "0.1"
 globalTimeout: 90
 testSuiteTimeout: 90
 testSuiteStep: 90
@@ -8,7 +8,7 @@ matrix:
   files: ["test_app.py"]
 runson: ${matrix.os}
 pre:
-  - npm install playwright@1.24.0 --save-exact
+  - npm install playwright --save-exact
   - pip install -r requirement.txt --cache-dir CacheDir
   - playwright install
 cacheKey: '{{ checksum "requirement.txt" }}'
