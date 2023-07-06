@@ -31,3 +31,5 @@ post:
 runtime:
   language: python
   version: "3.7"
+
+jobLabel: [playwright-pytest, mac, autosplit]
