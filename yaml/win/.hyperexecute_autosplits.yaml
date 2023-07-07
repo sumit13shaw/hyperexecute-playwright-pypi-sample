@@ -22,3 +22,5 @@ testDiscovery:
   mode: static
   command: grep -lr 'def' *.py
 testRunnerCommand: pytest $test
+
+jobLabel: [playwright-pytest, win, autosplit]
