@@ -1,0 +1,92 @@
+{
+    "id": "50998e07-3cea-415c-95a6-e29499580abd",
+    "created_at": "2024-12-21T13:47:18Z",
+    "update_at": "2024-12-21T13:48:12Z",
+    "global_timeout": 90,
+    "tunnel_name": "",
+    "start_time": "2024-12-21T13:47:27Z",
+    "end_time": "2024-12-21T13:48:12Z",
+    "summary": {
+        "total_time": 45000000000,
+        "execution_time": 45000000000,
+        "total_tasks": 1,
+        "build_time_consumed": 45000000000,
+        "jobTestExecutionTime": "7s",
+        "failed_tasks": 0,
+        "total_stage_info": {
+            "prerun": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 1
+            },
+            "scenario": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 1
+            },
+            "test_discovery": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 1
+            }
+        },
+        "status": "completed",
+        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=50998e07-3cea-415c-95a6-e29499580abd"
+    },
+    "tasks": [
+        {
+            "id": "0d309f81-8c9d-406d-bf68-d35c0549c424",
+            "os": "win",
+            "status": "completed",
+            "remark": "completed",
+            "debug": false,
+            "created_at": "2024-12-21T13:47:26Z",
+            "update_at": "2024-12-21T13:48:12Z",
+            "start_time": "2024-12-21T13:47:27Z",
+            "end_time": "2024-12-21T13:48:12Z",
+            "group_number": 1,
+            "stages": [
+                {
+                    "id": "39ce5222-1ef7-433d-8017-3d493ee21bb0",
+                    "type": "scenario",
+                    "status": "completed",
+                    "name": "test_app.py",
+                    "iteration": 0,
+                    "link": "command.1.0.log",
+                    "created_at": "2024-12-21T13:47:48Z",
+                    "started_at": "2024-12-21T13:47:51Z",
+                    "updated_at": "2024-12-21T13:48:10Z",
+                    "order": 4,
+                    "task_number": 1
+                },
+                {
+                    "id": "e5e268a5-226a-4ddc-ab84-890e6224b4f9",
+                    "type": "prerun",
+                    "status": "completed",
+                    "name": "pre",
+                    "iteration": 0,
+                    "link": "pre.log",
+                    "created_at": "2024-12-21T13:47:27Z",
+                    "started_at": "2024-12-21T13:47:27Z",
+                    "updated_at": "2024-12-21T13:47:48Z",
+                    "order": 2,
+                    "task_number": 1
+                },
+                {
+                    "id": "e9465f24-08cd-4d01-92a6-dc3139885e26",
+                    "type": "test_discovery",
+                    "status": "completed",
+                    "name": "discovery",
+                    "iteration": 0,
+                    "link": "discovery.log",
+                    "created_at": "2024-12-21T13:47:48Z",
+                    "started_at": "2024-12-21T13:47:48Z",
+                    "updated_at": "2024-12-21T13:47:48Z",
+                    "order": 3,
+                    "task_number": 1
+                }
+            ]
+        }
+    ],
+    "test_ids": null
+}
